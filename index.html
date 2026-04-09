@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Europa Day – Digital Accessibility Audio Stories & Activities</title>
+<style>
+:root {
+ --primary: #003366;
+ --accent: #FF1493;
+ --light-bg: #f8fbff;
+ --card-bg: #ffffff;
+}
+body {
+ font-family: Arial, "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+ max-width: 960px;
+ margin: 40px auto;
+ padding: 20px;
+ line-height: 1.75;
+ background: var(--light-bg);
+ color: #222;
+}
+h1 {
+ text-align: center;
+ color: var(--primary);
+ font-size: 2.3rem;
+ margin-bottom: 8px;
+}
+.subtitle {
+ text-align: center;
+ color: #555;
+ font-size: 1.25rem;
+ margin-bottom: 30px;
+}
+.lang-switch {
+ text-align: center;
+ margin: 30px 0 40px;
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+ gap: 14px;
+}
+.lang-switch button {
+ padding: 14px 28px;
+ font-size: 1.15em;
+ background: var(--primary);
+ color: white;
+ border: none;
+ border-radius: 50px;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ min-width: 160px;
+}
+.lang-switch button:hover,
+.lang-switch button[aria-pressed="true"] {
+ background: var(--accent);
+ transform: scale(1.05);
+}
+audio {
+ width: 100%;
+ margin: 20px 0 30px;
+ border-radius: 12px;
+}
+.card {
+ background: var(--card-bg);
+ border: 2px solid #e0e8f0;
+ border-radius: 16px;
+ padding: 28px;
+ margin: 30px 0;
+ box-shadow: 0 6px 20px rgba(0, 51, 102, 0.08);
+}
+.principle {
+ margin-top: 24px;
+ padding: 18px 20px;
+ border-left: 7px solid #00a2c7;
+ background: #f5f9ff;
+ border-radius: 10px;
+}
+.principle h4 {
+ margin-top: 0;
+ color: var(--primary);
+ font-size: 1.4rem;
+}
+.timestamp {
+ background: none;
+ border: 2px solid transparent;
+ color: #0066cc;
+ text-decoration: none;
+ font-size: 1.08em;
+ cursor: pointer;
+ font-weight: 600;
+ padding: 6px 14px;
+ border-radius: 30px;
+ transition: all 0.25s;
+}
+.timestamp:hover,
+.timestamp:focus {
+ background: #fff9c4;
+ color: #003366;
+ border-color: var(--accent);
+}
+.download a {
+ display: inline-block;
+ margin: 8px 14px 8px 0;
+ color: var(--primary);
+ font-weight: 600;
+}
+.download a.worksheet {
+ background: #ffe34c;
+ color: #003366;
+ padding: 12px 26px;
+ border-radius: 50px;
+ font-weight: bold;
+ font-size: 1.05em;
+ text-decoration: none;
+ box-shadow: 0 4px 12px rgba(255, 227, 76, 0.4);
+ transition: all 0.3s ease;
+}
+.download a.worksheet:hover,
+.download a.worksheet:focus {
+ background: #ffeb3b;
+ transform: translateY(-3px);
+ box-shadow: 0 8px 18px rgba(255, 152, 0, 0.3);
+ outline: 4px solid var(--accent);
+ outline-offset: 5px;
+}
+button:focus-visible,
+.timestamp:focus-visible,
+a:focus-visible {
+ outline: 4px solid var(--accent);
+ outline-offset: 5px;
+ border-radius: 8px;
+}
+@media (max-width: 640px) {
+ .lang-switch button {
+   width: 100%;
+   max-width: 300px;
+ }
+ h1 { font-size: 2rem; }
+}
+</style>
+</head>
+<body>
+<header style="display: flex; align-items: center; justify-content: flex-start; margin-bottom: 40px; gap: 20px; flex-wrap: wrap;">
+<img src="EP_Logo_EN_Landscape_BW.png"
+      alt="European Parliament logo"
+      style="max-height: 80px; width: auto; flex-shrink: 0;">
+<div>
+<h1 style="margin: 0; font-size: 1.85rem; color: #000000; line-height: 1.1;">
+     Europa Day – Digital Accessibility
+</h1>
+<p style="margin: 4px 0 0 0; font-size: 1.15rem; color: #000000; font-weight: 500;">
+     Audio stories and coloring worksheets
+</p>
+</div>
+</header>
+<nav class="lang-switch" aria-label="Language selection">
+<button onclick="showLang('en',this)" aria-pressed="true"><span aria-hidden="true">🇬🇧</span> English</button>
+<button onclick="showLang('de',this)" aria-pressed="false"><span aria-hidden="true">🇩🇪</span> Deutsch</button>
+<button onclick="showLang('fr',this)" aria-pressed="false"><span aria-hidden="true">🇫🇷</span> Français</button>
+</nav>
+<main>
+<!-- EN -->
+<section id="en" lang="en">
+<h2 tabindex="-1">English</h2>
+<p class="download">
+<a href="digital-accessibility-stories_en.mp3" download>Download MP3</a>
+<a href="kids-activity-script-europa-day_en.docx" download>Download transcript (DOCX)</a>
+<a href="kids-activity-worksheets_en.pdf" download target="_blank" rel="noopener" class="worksheet">
+   🎨 Coloring Worksheets (PDF)
+</a>
+</p>
+<audio id="audio-en" controls preload="metadata" playsinline>
+<source src="digital-accessibility-stories_en.mp3" type="audio/mpeg">
+ Your browser does not support audio playback.
+</audio>
+<div class="card">
+<h3>Timestamps</h3>
+<p>Jump to section:</p>
+<button class="timestamp" onclick="jump('audio-en',0)">▶ 0:00 – Introduction</button>
+<div class="principle">
+<h4>Perceivable</h4>
+<ul>
+<li><button class="timestamp" onclick="jump('audio-en',53)">▶ 0:53 – Simon</button></li>
+<li><button class="timestamp" onclick="jump('audio-en',80)">▶ 1:20 – Nika</button></li>
+</ul>
+</div>
+<div class="principle">
+<h4>Operable</h4>
+<ul>
+<li><button class="timestamp" onclick="jump('audio-en',110)">▶ 1:50 – Ola</button></li>
+<li><button class="timestamp" onclick="jump('audio-en',149)">▶ 2:29 – John</button></li>
+</ul>
+</div>
+<div class="principle">
+<h4>Understandable</h4>
+<ul>
+<li><button class="timestamp" onclick="jump('audio-en',180)">▶ 3:00 – Maria</button></li>
+<li><button class="timestamp" onclick="jump('audio-en',216)">▶ 3:36 – Sam</button></li>
+</ul>
+</div>
+<div class="principle">
+<h4>Robust</h4>
+<ul>
+<li><button class="timestamp" onclick="jump('audio-en',247)">▶ 4:07 – Nina</button></li>
+<li><button class="timestamp" onclick="jump('audio-en',282)">▶ 4:42 – Ana</button></li>
+</ul>
+</div>
+</div>
+</section>
+<!-- DE -->
+<section id="de" lang="de" style="display:none">
+<h2 tabindex="-1">Deutsch</h2>
+<p class="download">
+<a href="digital-accessibility-stories_de.mp3" download>MP3 herunterladen</a>
+<a href="kids-activity-script-europa-day_de.docx" download>Transkription herunterladen</a>
+<a href="kids-activity-worksheets_de.pdf" download target="_blank" rel="noopener" class="worksheet">
+   🎨 Malvorlagen (PDF)
+</a>
+</p>
+<audio id="audio-de" controls preload="metadata" playsinline>
+<source src="digital-accessibility-stories_de.mp3" type="audio/mpeg">
+ Ihr Browser unterstützt keine Audio-Wiedergabe.
+</audio>
+<div class="card">
+<h3>Zeitmarken</h3>
+<p>Zum Abschnitt springen:</p>
+<button class="timestamp" onclick="jump('audio-de',0)">▶ 0:00 – Einleitung</button>
+<div class="principle">
+<h4>Wahrnehmbar</h4>
+<ul>
+<li><button class="timestamp" onclick="jump('audio-de',72)">▶ 1:12 – Simon</button></li>
+<li><button class="timestamp" onclick="jump('audio-de',102)">▶ 1:42 – Nika</button></li>
+</ul>
+</div>
+<div class="principle">
+<h4>Bedienbar</h4>
+<ul>
+<li><button class="timestamp" onclick="jump('audio-de',138)">▶ 2:18 – Ola</button></li>
+<li><button class="timestamp" onclick="jump('audio-de',178)">▶ 2:58 – John</button></li>
+</ul>
+</div>
+<div class="principle">
+<h4>Verständlich</h4>
+<ul>
+<li><button class="timestamp" onclick="jump('audio-de',215)">▶ 3:35 – Maria</button></li>
+<li><button class="timestamp" onclick="jump('audio-de',257)">▶ 4:17 – Sam</button></li>
+</ul>
+</div>
+<div class="principle">
+<h4>Robust</h4>
+<ul>
+<li><button class="timestamp" onclick="jump('audio-de',292)">▶ 4:52 – Nina</button></li>
+<li><button class="timestamp" onclick="jump('audio-de',337)">▶ 5:37 – Ana</button></li>
+</ul>
+</div>
+</div>
+</section>
+<!-- FR -->
+<section id="fr" lang="fr" style="display:none">
+<h2 tabindex="-1">Français</h2>
+<p class="download">
+<a href="digital-accessibility-stories_fr.mp3" download>Télécharger MP3</a>
+<a href="kids-activity-script-europa-day_fr.docx" download>Télécharger la transcription</a>
+<a href="kids-activity-worksheets_fr.pdf" download target="_blank" rel="noopener" class="worksheet">
+   🎨 Coloriages (PDF)
+</a>
+</p>
+<audio id="audio-fr" controls preload="metadata" playsinline>
+<source src="digital-accessibility-stories_fr.mp3" type="audio/mpeg">
+ Votre navigateur ne supporte pas la lecture audio.
+</audio>
+<div class="card">
+<h3>Horodatage</h3>
+<p>Aller à la section :</p>
+<button class="timestamp" onclick="jump('audio-fr',0)">▶ 0:00 – Introduction</button>
+<div class="principle">
+<h4>Perceptible</h4>
+<ul>
+<li><button class="timestamp" onclick="jump('audio-fr',64)">▶ 1:04 – Simon</button></li>
+<li><button class="timestamp" onclick="jump('audio-fr',96)">▶ 1:36 – Nika</button></li>
+</ul>
+</div>
+<div class="principle">
+<h4>Utilisable</h4>
+<ul>
+<li><button class="timestamp" onclick="jump('audio-fr',126)">▶ 2:06 – Ola</button></li>
+<li><button class="timestamp" onclick="jump('audio-fr',164)">▶ 2:44 – John</button></li>
+</ul>
+</div>
+<div class="principle">
+<h4>Compréhensible</h4>
+<ul>
+<li><button class="timestamp" onclick="jump('audio-fr',197)">▶ 3:17 – Maria</button></li>
+<li><button class="timestamp" onclick="jump('audio-fr',230)">▶ 3:50 – Sam</button></li>
+</ul>
+</div>
+<div class="principle">
+<h4>Robuste</h4>
+<ul>
+<li><button class="timestamp" onclick="jump('audio-fr',258)">▶ 4:18 – Nina</button></li>
+<li><button class="timestamp" onclick="jump('audio-fr',296)">▶ 4:56 – Ana</button></li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+<footer style="margin-top: 50px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; font-size: 0.9em; color: #555;">
+<p>These audio stories and transcripts are made available for educational and non-commercial use under the <strong>Creative Commons Attribution NonCommercial 4.0 International (CC BY-NC 4.0)</strong> license.</p>
+<p>You are welcome to use them during Europa Day activities and in classrooms. Please credit: "Europa Day – Digital Accessibility Awareness by European Parliament".</p>
+</footer>
+<script>
+function showLang(lang, button) {
+ document.querySelectorAll('audio').forEach(a => a.pause());
+ document.querySelectorAll('section').forEach(el => el.style.display = 'none');
+ document.getElementById(lang).style.display = 'block';
+ document.querySelectorAll('.lang-switch button').forEach(btn => btn.setAttribute('aria-pressed', 'false'));
+ button.setAttribute('aria-pressed', 'true');
+ document.querySelector('#' + lang + ' h2').focus();
+}
+function jump(audioId, seconds) {
+ const audio = document.getElementById(audioId);
+ if (audio) {
+   audio.currentTime = seconds;
+   audio.play().catch(() => {});
+   audio.focus();
+ }
+}
+</script>
+</body>
+</html>
